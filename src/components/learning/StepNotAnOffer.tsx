@@ -62,9 +62,15 @@ const StepNotAnOffer = ({ onNext, onPrev }: { onNext: () => void; onPrev: () => 
             >
               <div className="flex-1">
                 <span className="font-medium text-foreground">{item.text}</span>
-                {showResults && !item.isOffer && (
+                {showResults && (
                   <span className="block text-sm text-muted-foreground mt-1">
-                    Actually: <span className="font-semibold">{item.actual}</span>
+                    {correct ? "✅ " : "❌ "}
+                    {item.isOffer ? "Offer" : "Not an Offer"}
+                    {item.why && (
+                      <span className="block mt-1 italic">
+                        Why? {item.why}
+                      </span>
+                    )}
                   </span>
                 )}
               </div>
