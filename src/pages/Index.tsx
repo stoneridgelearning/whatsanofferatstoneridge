@@ -6,7 +6,7 @@ import StepDefinition from "@/components/learning/StepDefinition";
 import StepNotAnOffer from "@/components/learning/StepNotAnOffer";
 import StepWhyMatters from "@/components/learning/StepWhyMatters";
 import StepProcess from "@/components/learning/StepProcess";
-import logo from "@/assets/stoneridge_logo_blck.png";
+import logo from "@/assets/stoneridge-logo-trans-white.png";
 
 const stepLabels = ["Welcome", "Definition", "Quiz", "Why It Matters", "Process"];
 
@@ -20,9 +20,9 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 py-6 md:py-10">
         {/* Header with Logo */}
-        <div className="flex items-center justify-between mb-8 pb-4 border-b border-border">
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-border bg-primary rounded-xl px-6 py-3">
           <img src={logo} alt="Stoneridge Software" className="h-10 md:h-12 w-auto" />
-          <span className="text-sm font-heading font-medium text-muted-foreground hidden sm:block">
+          <span className="text-sm font-heading font-medium text-primary-foreground hidden sm:block">
             Understanding Offers
           </span>
         </div>
