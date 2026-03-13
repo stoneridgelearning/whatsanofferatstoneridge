@@ -6,6 +6,7 @@ import StepDefinition from "@/components/learning/StepDefinition";
 import StepNotAnOffer from "@/components/learning/StepNotAnOffer";
 import StepWhyMatters from "@/components/learning/StepWhyMatters";
 import StepProcess from "@/components/learning/StepProcess";
+import logo from "@/assets/stoneridge_logo_blck.png";
 
 const stepLabels = ["Welcome", "Definition", "Quiz", "Why It Matters", "Process"];
 
