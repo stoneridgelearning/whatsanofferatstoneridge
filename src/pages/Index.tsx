@@ -18,7 +18,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 py-8 md:py-12">
+      <div className="max-w-4xl mx-auto px-4 py-6 md:py-10">
+        {/* Header with Logo */}
+        <div className="flex items-center justify-between mb-8 pb-4 border-b border-border">
+          <img src={logo} alt="Stoneridge Software" className="h-10 md:h-12 w-auto" />
+          <span className="text-sm font-heading font-medium text-muted-foreground hidden sm:block">
+            Understanding Offers
+          </span>
+        </div>
+        
         <ProgressBar currentStep={step} totalSteps={stepLabels.length} labels={stepLabels} />
         <AnimatePresence mode="wait">
           {step === 0 && <StepIntro key="intro" onNext={next} />}
