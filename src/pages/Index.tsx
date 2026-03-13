@@ -22,7 +22,7 @@ const Index = () => {
         {/* Header with Logo */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-border bg-primary rounded-xl px-6 py-3">
           <img src={logo} alt="Stoneridge Software" className="h-10 md:h-12 w-auto" />
-          <span className="text-sm font-heading font-medium text-muted-foreground hidden sm:block">
+          <span className="text-sm font-heading font-medium text-primary-foreground hidden sm:block">
             Understanding Offers
           </span>
         </div>
