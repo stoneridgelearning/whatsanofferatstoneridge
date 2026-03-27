@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Stoneridge Software Brand Colors */
-    --background: 0 0% 100%; /* white */
+    --background: 195 20% 97%; /* soft teal-tinted off-white */
     --foreground: 200 10% 24%; /* #363f43 */
 
     --card: 0 0% 100%;
