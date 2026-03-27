@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, FileEdit, CheckCircle, BookOpen, Rocket } from "lucide-react";
+import { MessageSquare, FileEdit, CheckCircle, BookOpen, Rocket, Lightbulb, HelpCircle, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
 const steps = [
@@ -10,8 +10,23 @@ const steps = [
   { icon: Rocket, label: "Go-To-Market Launch", num: 5, description: "The offer is officially launched with marketing collateral, sales enablement, and client-facing materials." },
 ];
 
+const learningSummary = [
+  { icon: Lightbulb, title: "What Is an Offer", summary: "A standardized, repeatable solution with defined scope, deliverables, and pricing." },
+  { icon: HelpCircle, title: "How to Identify an Offer", summary: "If it solves a common problem for multiple customers and can be reused, it's an offer." },
+  { icon: TrendingUp, title: "Why It Matters", summary: "Offers drive consistency, scalability, and faster time-to-value for clients." },
+  { icon: Rocket, title: "The Official Process", summary: "Manager discussion → Submit form → Committee review → Enablement → Go-to-market." },
+];
+
 const StepProcess = ({ onPrev }: { onPrev: () => void }) => {
   const [activeStep, setActiveStep] = useState<number | null>(null);
+
+  const handleFinish = () => {
+    if (window.close) {
+      window.close();
+    }
+    // Fallback if window.close doesn't work (e.g. not opened by script)
+    window.location.reload();
+  };
 
   return (
     <motion.div
@@ -63,11 +78,26 @@ const StepProcess = ({ onPrev }: { onPrev: () => void }) => {
         ))}
       </div>
 
-      <div className="text-center mb-6 p-6 bg-card rounded-xl border border-border">
-        <h3 className="font-heading font-bold text-primary text-xl mb-2">🎉 You've completed the learning!</h3>
-        <p className="text-muted-foreground">
-          Now you understand what an offer is, how to identify one, why it matters, and the process to create one.
-        </p>
+      <div className="mb-6 p-6 bg-card rounded-xl border border-border">
+        <h3 className="font-heading font-bold text-primary text-xl mb-4 text-center">🎉 You've completed the learning!</h3>
+        <p className="text-muted-foreground text-center text-sm mb-5">Here's a recap of everything you learned:</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {learningSummary.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 + i * 0.1 }}
+              className="flex items-start gap-3 p-3 rounded-lg bg-muted/50"
+            >
+              <item.icon className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <div>
+                <p className="font-heading font-semibold text-sm text-foreground">{item.title}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{item.summary}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       <div className="flex justify-between">
@@ -78,7 +108,7 @@ const StepProcess = ({ onPrev }: { onPrev: () => void }) => {
           <button onClick={() => window.location.reload()} className="px-6 py-2.5 border border-border rounded-lg font-heading font-medium text-muted-foreground hover:bg-muted transition-colors">
             Start Over ↻
           </button>
-          <button onClick={() => window.location.reload()} className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
+          <button onClick={handleFinish} className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
             Finish ✓
           </button>
         </div>
