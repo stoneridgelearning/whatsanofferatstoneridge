@@ -74,9 +74,14 @@ const StepProcess = ({ onPrev }: { onPrev: () => void }) => {
         <button onClick={onPrev} className="px-6 py-2.5 border border-border rounded-lg font-heading font-medium text-muted-foreground hover:bg-muted transition-colors">
           ← Back
         </button>
-        <button onClick={() => window.location.reload()} className="px-6 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
-          Start Over ↻
-        </button>
+        <div className="flex gap-3">
+          <button onClick={() => window.location.reload()} className="px-6 py-2.5 border border-border rounded-lg font-heading font-medium text-muted-foreground hover:bg-muted transition-colors">
+            Start Over ↻
+          </button>
+          <button onClick={() => window.location.reload()} className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
+            Finish ✓
+          </button>
+        </div>
       </div>
     </motion.div>
   );
