@@ -17,8 +17,8 @@ const Index = () => {
   const prev = () => setStep((s) => Math.max(s - 1, 0));
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 py-6 md:py-10">
+    <div className="min-h-screen bg-background flex items-start justify-center py-6 md:py-10 px-4">
+      <div className="w-full max-w-4xl bg-card rounded-2xl border border-border shadow-lg p-6 md:p-10">
         {/* Header with Logo */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-border bg-primary rounded-xl px-6 py-3">
           <img src={logo} alt="Stoneridge Software" className="h-10 md:h-12 w-auto" />
