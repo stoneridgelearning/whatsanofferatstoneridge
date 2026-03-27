@@ -5,7 +5,7 @@ import { useState } from "react";
 const items = [
   { text: "Service / Capability", isOffer: false, why: "This describes a general service capability, not a defined and repeatable solution." },
   { text: "Custom One-Time Project", isOffer: false, why: "This is custom work created for a specific client, which makes it non-repeatable." },
-  { text: "Fixed-Scope D365 Implementation Package", isOffer: true, why: "This solution has a fixed scope and defined deliverables, making it repeatable across clients." },
+  { text: "Fixed-Scope D365 Implementation Package", isOffer: true, why: "This solution solves a common problem for multiple customers and can be reused — that's what makes it an offer, not just the fixed scope or price (which alone would be a fixed-fee project)." },
   { text: "Variable Scope or Pricing", isOffer: false, why: "If the scope or pricing changes each time, the solution cannot be standardized." },
   { text: "Non-Repeatable Work", isOffer: false, why: "Offers must be repeatable solutions that can be delivered consistently." },
   { text: "Repeatable Power BI Assessment", isOffer: true, why: "This assessment can be delivered the same way for multiple clients, making it a repeatable solution." },

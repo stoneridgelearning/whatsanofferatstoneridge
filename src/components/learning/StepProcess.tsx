@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import { ClipboardCheck, FileEdit, Shield, Users, Rocket } from "lucide-react";
+import { MessageSquare, FileEdit, CheckCircle, BookOpen, Rocket } from "lucide-react";
 import { useState } from "react";
 
 const steps = [
-  { icon: ClipboardCheck, label: "Offer Committee Review", num: 1, description: "The offer committee evaluates the proposed offer for market fit, feasibility, and strategic alignment." },
-  { icon: FileEdit, label: "Submission Form Completed", num: 2, description: "A standardized submission form captures all key details: scope, deliverables, pricing, and timeline." },
-  { icon: Shield, label: "Leadership Approval", num: 3, description: "Senior leadership reviews and approves the offer, ensuring it aligns with company strategy and standards." },
-  { icon: Users, label: "Delivery Teams", num: 4, description: "Delivery teams are briefed and enabled with playbooks, templates, and training materials." },
+  { icon: MessageSquare, label: "Manager Discussion", num: 1, description: "Discuss your offer idea with your manager to get initial alignment, feedback, and guidance on next steps." },
+  { icon: FileEdit, label: "Submit Offer Form", num: 2, description: "Obtain the offer submission form from your manager and complete it with all key details: scope, deliverables, pricing, and timeline." },
+  { icon: CheckCircle, label: "Offer Committee Review & Approval", num: 3, description: "The offer committee evaluates the submission for market fit, feasibility, and strategic alignment, and approves or provides feedback." },
+  { icon: BookOpen, label: "Offer Enablement", num: 4, description: "Final pricing, delivery readiness, playbooks, templates, and training materials are prepared to support the offer." },
   { icon: Rocket, label: "Go-To-Market Launch", num: 5, description: "The offer is officially launched with marketing collateral, sales enablement, and client-facing materials." },
 ];
 
@@ -74,9 +74,14 @@ const StepProcess = ({ onPrev }: { onPrev: () => void }) => {
         <button onClick={onPrev} className="px-6 py-2.5 border border-border rounded-lg font-heading font-medium text-muted-foreground hover:bg-muted transition-colors">
           ← Back
         </button>
-        <button onClick={() => window.location.reload()} className="px-6 py-2.5 bg-secondary text-secondary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
-          Start Over ↻
-        </button>
+        <div className="flex gap-3">
+          <button onClick={() => window.location.reload()} className="px-6 py-2.5 border border-border rounded-lg font-heading font-medium text-muted-foreground hover:bg-muted transition-colors">
+            Start Over ↻
+          </button>
+          <button onClick={() => window.location.reload()} className="px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-heading font-semibold hover:opacity-90 transition-opacity">
+            Finish ✓
+          </button>
+        </div>
       </div>
     </motion.div>
   );
