@@ -12,7 +12,7 @@ const teams = [
     icon: DollarSign,
     title: "Delivery Teams",
     subtitle: "Ensure Consistent Delivery",
-    description: "Delivery teams follow proven playbooks, ensuring quality and predictability on every engagement.",
+    description: "Delivery teams follow proven blueprint, ensuring quality and predictability on every engagement.",
   },
   {
     icon: TrendingUp,
