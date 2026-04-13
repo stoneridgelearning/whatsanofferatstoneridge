@@ -13,7 +13,7 @@ const StepIntro = ({ onNext }: { onNext: () => void }) => {
         <Lightbulb className="w-12 h-12 text-secondary" />
       </div>
       <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">
-        What Is an Offer?
+        What's an Offer?
       </h2>
       <p className="text-lg text-muted-foreground mb-3">
         Understanding how Stoneridge packages and delivers{" "}
