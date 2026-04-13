@@ -3,7 +3,7 @@ import { MessageSquare, FileEdit, CheckCircle, BookOpen, Rocket, Lightbulb, Help
 import { useState } from "react";
 
 const steps = [
-  { icon: MessageSquare, label: "Manager Discussion", num: 1, description: "Discuss your offer idea with your manager to get initial alignment and feedback. Then connect with your VP or Director for next steps" },
+  { icon: MessageSquare, label: "Manager Discussion", num: 1, description: "Discuss your offer idea with your manager to get initial alignment and feedback. Then connect with your VP or Director for next steps." },
   { icon: FileEdit, label: "Submit Offer Form", num: 2, description: "Obtain the offer submission form from your manager and complete it with all key details: scope, deliverables, pricing, and timeline." },
   { icon: CheckCircle, label: "Offer Committee Review & Approval", num: 3, description: "The offer committee evaluates the submission for market fit, feasibility, and strategic alignment, and approves or provides feedback." },
   { icon: BookOpen, label: "Offer Enablement", num: 4, description: "Final pricing, delivery readiness, playbooks, templates, and training materials are prepared to support the offer." },
